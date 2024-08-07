@@ -1,8 +1,32 @@
 function calculateIMC() {
-    const weight = parseFloat(document.getElementById('weight').value);
-    const height = parseFloat(document.getElementById('height').value);
+    // Converter valores para float, substituindo vírgula por ponto
+    function convertToFloat(value) {
+        const normalizedValue = value.replace(',', '.');
+        return parseFloat(normalizedValue);
+    }
+    
+    // Verificar se a altura está em centímetros e convertê-la para metros
+    function normalizeHeight(value) {
+        return value > 3 ? value / 100 : value;
+    }
 
-    if (!weight || !height) {
+    // Verificar se o peso está em formato inadequado e convertê-lo
+    function normalizeWeight(value) {
+        return value > 300 ? value / 10 : value;
+    }
+
+    const weightInput = document.getElementById('weight').value;
+    const heightInput = document.getElementById('height').value;
+
+    let weight = convertToFloat(weightInput);
+    let height = convertToFloat(heightInput);
+
+    // Normalizar a altura e o peso, se necessário
+    weight = normalizeWeight(weight);
+    height = normalizeHeight(height);
+
+    // Verificar se os valores são números e positivos
+    if (isNaN(weight) || weight <= 0 || isNaN(height) || height <= 0) {
         document.getElementById('result').innerText = "Por favor, insira valores válidos.";
         return;
     }
