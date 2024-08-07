@@ -8,7 +8,7 @@ Calculadora de IMC é uma aplicação construída durante o curso Webdesign Fron
 A aplicação consiste em uma calculadora de índice de massa corporal, que é uma fórmula que usa peso e altura para estimar a gordura corporal. Ele é utilizado para avaliar se o peso está dentro do valor ideal para a altura, diagnosticar problemas de saúde como obesidade ou desnutrição e categorizar os indivíduos de acordo com seu peso em relação à altura.
 
 ## Layout web
-![Web 1]()
+![Web 1](https://github.com/thaynacris/imc/blob/main/assets/image/interface.png)
 
 # Tecnologias utilizadas
 ## Front end

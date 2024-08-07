@@ -4,7 +4,7 @@ function calculateIMC() {
         const normalizedValue = value.replace(',', '.');
         return parseFloat(normalizedValue);
     }
-    
+
     // Verificar se a altura está em centímetros e convertê-la para metros
     function normalizeHeight(value) {
         return value > 3 ? value / 100 : value;
